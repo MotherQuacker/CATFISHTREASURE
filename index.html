@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+style="display: none;"
+$("#addButton").show();
 <html>
 <head>
 <title>Cat Fish</title>
@@ -16,26 +18,46 @@
                                                                                              ↓
                                                                                           (^._.^)<|
  ____________________________________________________________________________________________________________________________________________________________________________________________
+                                                                       
 </pre></font>
-<<<<<<< HEAD
 <p></p>
-=======
-<input type="button" value="Take A Stick" id="countButton" />
+<input type="button" value="Take A Stick" id="countButtonOfSticks"/>
 
-    <p><font color = "white"> You Have <span id="displayCount">0</span> Sticks.</p> </font>
+    <p><font color = "white"> You Have <span id="displayCountOfSticks" >0</span> Sticks.</p> </font>
+	
+<input type="button" value="Take A Rock" id="countButtonOfRocks" style="visibility:hidden;"/>
 
-    <script type="text/javascript">
-      var count = 0;
-      var button = document.getElementById("countButton");
-      var display = document.getElementById("displayCount");
-
-      button.onclick = function(){
-        count++;
-        display.innerHTML = count;
+    <p  id="countButtonOfRocks" style="visibility:hidden;"<font color = "white"> You Have <span id="displayCountOfRocks">0</span > Rocks. </font></p>
+	
+    <script language='javascript'type="text/javascript">
+      var countOfSticks = 0;
+      var buttonTakeStick = document.getElementById("countButtonOfSticks");
+      var displaySticksHave = document.getElementById("displayCountOfSticks");
+	  
+	  var countOfRocks = 0;
+      var buttonTakeRock = document.getElementById("countButtonOfRocks");
+      var displayRocksHave = document.getElementById("displayCountOfRocks");
+	  
+	  if(countOfSticks > 3){
+         buttonTakeRock.style.visibility = "visible";
       }
-       
+	  
+      buttonTakeStick.onclick = function(){
+        countOfSticks++;
+        displaySticksHave.innerHTML = countOfSticks;
+		}
+		
+      buttonTakeRock.onclick = function(){
+        countOfRocks++;
+        displayRocksHave.innerHTML = countOfRocks;
+		}
+	  
+      
     </script>
- 
->>>>>>> 72b24ff387bdf5b9b01a614ac5ff558de1545af1
+	
+	<pre><font color = "white">
+ ________________________________________________________________________________________CREATE STUFF________________________________________________________________________________________
+	       
+	</pre></font>
 </body bgcolor>
 </html>
